@@ -9,7 +9,8 @@ async function bootstrap() {
 
   // Cloud PORT ni theeskuntundi. '0.0.0.0' ivvadam Railway ki chala crucial!
   const port = process.env.PORT || 3000;
-  await app.listen(port, '0.0.0.0');
+  // Replace your existing app.listen line with this:
+  await app.listen(process.env.PORT || 3000, '0.0.0.0');
 
   console.log(`Application is running on port: ${port}`);
 }
